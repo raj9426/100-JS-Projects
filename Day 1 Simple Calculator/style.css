@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #43575e;
+    
+}
+
+.cal-container{
+    background-color: #c99292;
+    /* padding: 20px 0; */
+    width: 400px;
+    /* height: 900px; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    
+}
+.result{
+    width: 100%;
+    height: 150px;
+    padding: 20px;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    background-color: #faeded;
+}
+.operators{
+    width: 100%;
+    height: 500px;
+    background-color: #d35959;
+    display: grid;
+    gap: .9px;
+    grid-template-columns:  repeat(4, 99.4px);
+    grid-template-rows: repeat(5, 100px);
+
+    /* place-items: center; */
+}
+.operators div{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    /* width: 50px;
+    height: 50px; */
+    display: flex;
+    /* border: 1px solid; */
+    color: #d35959;
+    justify-content: center;
+    align-items: center ;
+    text-align: center;
+    background-color: #eed9d9;
+
+}
+.operators div:hover{
+    background-color: #f0c0c0;
+}
+
+.operators div:active{
+    background-color: #ddbebe;
+}
+
+
+.eq{
+    grid-row: span 3;
+}
+.ac{
+    grid-column: span 2;
+}
