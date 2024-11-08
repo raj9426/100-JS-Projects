@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Varela+Round&display=swap');
+/* :root{
+    --after-content:''
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: #131921;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 
+.container{
+    width: 600px;
+    height: 300px;
+    background-color: #d1a0a0;
+    position: relative;
+    z-index: 1111;
+    transform-style: preserve-3d; 
+    box-shadow: 0 0 12px conic-gradient(from 90deg at 40% -25% #7da9f6, #8d7df6, #b17df6, #ce7df6);
+}
+
+.container::before{
+    content: "";
+    position: absolute;
+    z-index: 0;
+    inset: 0px;
+    background-color: #fff;
+    transform: translate3d(0px, 0px, -1px);
+    filter: blur(10px);
+} */
+
+.container {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    background: #2c2136;
+    transform-style: preserve-3d;
+    border-radius: 5px;
+  }
+  .container::before {
+    content: "";
+    position: absolute; 
+    inset:-20px;
+    background: conic-gradient(from 90deg at 40% -25%, #66d5f4, #65a5f4, #7a62f4, #8556f3, #af59f1, #ef59f1);
+    filter: blur(100px);
+    transform: translate3d(0px,0px,-1px);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  .time{
+    width: 90%;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    font-size: 180px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.time::after{
+    content: var(--after-content, '');
+    position: absolute;
+    top: 30px;
+    left: 92%;
+    color: #fff;
+    font-size: 40px;
+    background: linear-gradient(to right, #858df4 0%, #c222ee 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+span{
+    background: linear-gradient(to right, #858df4 0%, #c222ee 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.day{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    font-family: "Bebas Neue", sans-serif;
+  
+}
+.day span{
+
+    background: linear-gradient(to right, #5c65e3 0%, #f6834a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
